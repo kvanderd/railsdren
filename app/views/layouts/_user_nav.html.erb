@@ -1,0 +1,17 @@
+<div id="user_nav">
+	<%= link_to "home", root_path %>	
+	<% if user_signed_in? %>
+		Signed in as <%= current_user.email %>. Not you?
+		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+	<% else %>
+	<% form_tag user_session_path do %>
+		<%= text_field_tag 'user[email]', nil, :placeholder => 'email' %>
+		<%= password_field_tag 'user[password]', nil, :placeholder => 'password' %>
+		<%= button_tag "sign in" %>
+		<%= label_tag 'user[remember_me]', 'Remember Me' %>
+		<%= link_to "Password Lost?", new_password_path('user') %>
+	<% end %>
+<% end %>
+</div>
+
+

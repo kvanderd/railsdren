@@ -1,0 +1,6 @@
+
+
+== Description of Contents
+
+Skeleton for making web apps. Comes with devise (error messages customized for better user experience), bootstrap(using sass not less), and simple form.
+  

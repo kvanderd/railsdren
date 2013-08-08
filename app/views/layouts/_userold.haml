@@ -1,0 +1,19 @@
+%navbar
+  .navbar
+    .navbar-brand= link_to 'Home', root_path
+    .logged_in_name= "Logged in as #{current_user.email}" if current_user
+    %span{class: "right_side_nav_links"}
+      - if current_user
+        = link_to('Logout', destroy_user_session_path, :method => :delete)
+      - else
+        = form_tag user_session_path do
+          Log In
+          = text_field_tag 'user[email]', nil,  :placeholder => 'E-Mail'
+          = password_field_tag 'user[password]', nil, placeholder: 'Password'
+          %button Sign in
+          = check_box_tag 'user[remember_me]'
+          = label_tag 'user[remember_me]', 'Remember me'
+          %span.lost_password
+            = link_to "Password lost?", new_password_path('user')
+            = link_to "Create Account", new_user_registration_path
+            

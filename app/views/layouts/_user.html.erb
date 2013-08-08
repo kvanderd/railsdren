@@ -1,0 +1,41 @@
+<nav>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<span class="icon-bar"></span>
+			<div class="brand">
+				<%= link_to "home", root_path %>
+			</div>
+			<% if current_user %>
+			<%= "#{current_user.email}" %>
+			<% end %>
+			<% if user_signed_in? %>
+			<!-- Signed in as <%# current_user.email %>. Not you? -->
+			<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+			<% else %>
+			<%= link_to "Create Account", new_user_registration_path %>
+			<div class="navbar-form pull-right">
+				<%= form_tag user_session_path do %>
+				<div class="form-control">
+					<%= text_field_tag 'user[email]', nil, :placeholder => 'email' %>
+					<%= password_field_tag 'user[password]', nil, :placeholder => 'password' %>
+					<%= button_tag "sign in" %>
+					
+
+				<div class="span2">
+					<%= label_tag 'user[remember_me]', 'Remember Me' %>
+					<%= check_box_tag 'user[remember_me]' %>
+					</div>
+					<%= link_to "Password Lost?", new_password_path('user') %>
+					</div>
+				</div>
+				<% end %>
+				<% end %>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+
