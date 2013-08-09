@@ -2,14 +2,53 @@
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 
-$navbarBackground: #555;
-$navbarBackgroundHighlight: #000;
-$navbarLinkColor: #FFFFFF;
-$linkColor: #FFFFFF;
+$navbarBackground: #FFFFFF;
+$navbarBackgroundHighlight: #60ba3e;
+$navbarLinkColor: #cc33ff;
+$linkColor: #cc33ff;
 
 @import "bootstrap";
 
-body { padding-top: 60px; }
-
+body { padding-top: 65px; }
+h5 {color: #60ba3e }
 @import "bootstrap-responsive";
 
+
+
+body {
+  background: url('/assets/background_smaller_copy.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Finger Paint;
+}
+
+h1 {
+  color: #cc33ff
+}
+
+.molly {
+	background:url('/assets/dren4.png');
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 40em;
+  height: 40em;
+}
+
+.wrapper {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  float: right; 
+}
+
+
+/*
+#dren)colors{
+	4f0c8d - purple
+	cc33ff - pink
+	60ba3e - green
+	643e27 - brown
+}*/
