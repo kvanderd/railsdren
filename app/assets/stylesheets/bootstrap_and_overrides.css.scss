@@ -29,19 +29,35 @@ h1 {
 }
 
 .molly {
-	background:url('/assets/dren4.png');
+	background:url('/assets/dren4.png') no-repeat;
   display: block;
   position: relative;
   margin: auto;
   width: 40em;
-  height: 40em;
+  height: 42em;
+  float: right;
+  
 }
 
 .wrapper {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  float: right; 
+ 
+}
+
+.grade_levels ul {
+  height: 10em;
+  width: 40em;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+.grade_levels ul li {
+  list-style-type: none;
+  font-size: 5em;
+  margin-top: 2em;
 }
 
 

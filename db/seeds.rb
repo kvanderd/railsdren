@@ -8,16 +8,16 @@
 
 
 #create 3 grades  
-  Grade.create(name: "kindergarten", level: 0)
-  Grade.create(name: "first-grade", level: 1)
-  Grade.create(name: "second-grade", level: 2)
+  Grade.create(name: "First Grade", level: 1)
+  Grade.create(name: "Second Grade", level: 2)
+  Grade.create(name: "Third Grade", level: 3)
 
 
 
 #Addition decks for Grade level 1 
 
 #addition Decks
-level = 0
+level = 1
 3.times do
 	Deck.create(name: "Addition", level: level, grade_id: 1)
 	level += 1

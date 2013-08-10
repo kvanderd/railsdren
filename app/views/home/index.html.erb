@@ -1,12 +1,18 @@
 <h1>Welcome to Molly Math</h1>
-	<div class="span5">
-		<h2>Select Your Grade Level</h2>
-	</div>
-	<div class="wrapper">
-		<% @grades.each do |grade| %>
-		  <%= link_to grade.name, grade_decks_path(grade.id) %>
-		<% end %>
-	  <div class="molly"></div>
-	</div>
+<div class="span5">
+	<h4>Select Your Grade:</h4>
 </div>
+<div class="span11">
+	<div class="span4">
+		  <div class="grade_levels">
+		  	<ul>
+					<% @grades.each do |grade| %>
+					<li class="grade_levels"><%= link_to grade.name, grade_decks_path(grade.id) %></li>
+					<% end %>
+			  </ul>
+	    </div>
+	  </div>
+	<div class="molly"></div>
+</div>
+
 
