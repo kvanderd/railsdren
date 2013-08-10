@@ -13,6 +13,16 @@ class RoundsController < ApplicationController
 	end
 
 	def create
+		@round = Round.create(deck_id: params[:format])
+		# session[@round_id]
+		# @cards = Deck.find(params[:deck_id]).cards
+		# #this puts the cards in the order they will be rendered
+		# @shuffled_deck = @cards.map { |card| card.id }.shuffle.to_json
+		# #this is a shuffled deck of card_ids.
+		# #show one at a time. When 10 cards have been shown, end
+		# @shuffled_deck
+		# #shoul
+		redirect_to round_path(@round.id)
 	end
   
   def show
