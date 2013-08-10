@@ -9,4 +9,5 @@
 class Grade < ActiveRecord::Base
 	has_many :decks
 	has_many :users
+	attr_accessible :name, :level
 end

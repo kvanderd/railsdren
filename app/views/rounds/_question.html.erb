@@ -1,0 +1,12 @@
+<h1>Hi</h1>
+<%= @cards %>
+
+<!-- #create a form the makes a post request - this is all ajax, remote true -->
+
+<div class="user_answer_form">
+	<%= form_for :rounds, remote:true  do |f| %>
+	<%= f.text_field :round_id %>
+	<%= f.hidden_field("card id infor") %>
+	<%= f.submit "Submit" %>
+	<% end %>
+</div>

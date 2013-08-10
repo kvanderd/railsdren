@@ -14,18 +14,22 @@
 ActiveRecord::Schema.define(:version => 20130809155152) do
 
   create_table "cards", :force => true do |t|
-    t.string  "question"
-    t.string  "answer"
+    t.integer "num1"
+    t.integer "num2"
+    t.string  "operator"
     t.integer "deck_id"
   end
 
   create_table "decks", :force => true do |t|
     t.string   "name"
+    t.integer  "level"
+    t.integer  "grade_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "grades", :force => true do |t|
+    t.string  "name"
     t.integer "level"
   end
 

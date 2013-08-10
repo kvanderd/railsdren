@@ -5,3 +5,40 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+#create 3 grades  
+  Grade.create(name: "kindergarten", level: 0)
+  Grade.create(name: "first-grade", level: 1)
+  Grade.create(name: "second-grade", level: 2)
+
+
+
+#Addition decks for Grade level 1 
+
+#addition Decks
+level = 0
+3.times do
+	Deck.create(name: "Addition", level: level, grade_id: 1)
+	level += 1
+end
+
+#cards for deck 1
+10.times do
+  var1 = rand(1..10)
+  var2 = rand(1..10) 
+	Card.create(num1: var1, num2: var2, operator: "+", deck_id: 1)
+end
+
+10.times do
+  var1 = rand(5..15)
+  var2 = rand(5..15) 
+	Card.create(num1: var1, num2: var2, operator: "+", deck_id: 2)
+end
+
+10.times do
+  var1 = rand(10..25)
+  var2 = rand(10..25) 
+	Card.create(num1: var1, num2: var2, operator: "+", deck_id: 3)
+end
+
