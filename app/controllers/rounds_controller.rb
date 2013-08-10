@@ -9,6 +9,7 @@ class RoundsController < ApplicationController
 		#this is a shuffled deck of card_ids.
 		#show one at a time. When 10 cards have been shown, end
 		@shuffled_deck
+		#should this redirect to show (pass the round session and shuffle the cards)
 	end
   
   def show

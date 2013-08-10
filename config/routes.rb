@@ -2,10 +2,13 @@ Bootstrapuser::Application.routes.draw do
   devise_for :users
   root :to => 'home#index'
   resources :grades
+   
+  resources :rounds
   
-  resources :decks do
-    resources :rounds
+  resources :grades do
+    resources :decks
   end
+
   
 
   # The priority is based upon order of creation:

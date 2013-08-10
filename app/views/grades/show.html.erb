@@ -1,7 +1,0 @@
-<h2><%= @grade_name.name %></h2>
-
-<%= @grade_name.decks.first.name %>
-<% @grade_name.decks.each do |deck| %>
-		<li><%= link_to deck.level, new_deck_round_path(deck.id) %></li>
-<% end %>
-

@@ -4,7 +4,7 @@
 	</div>
 	<div class="wrapper">
 		<% @grades.each do |grade| %>
-		  <%= link_to grade.name, grade_path(grade.id) %>
+		  <%= link_to grade.name, grade_decks_path(grade.id) %>
 		<% end %>
 	  <div class="molly"></div>
 	</div>
