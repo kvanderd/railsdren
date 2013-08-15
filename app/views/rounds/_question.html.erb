@@ -1,12 +1,25 @@
-<h1>Hi</h1>
-<%= @card.num1 %>
-<h2>+</h2>
-<%= @card.num2 %><!-- #create a form the makes a post request - this is all ajax, remote true -->
+<h2>What is ...</h2>
+<%= @card.num1 %> + <%= @card.num2 %>
+<p>this is the round id</p>
+<%= @round.id %>
+<p>This is is the card id</p>
 <%= @card.id %>
 <div class="user_answer_form">
-	<%= form_for :rounds, remote:true  do |f| %>
-	<%= f.text_field :round_id %>
-	<%= f.hidden_field("card id infor") %>
-	<%= f.submit "Submit" %>
-	<% end %>
+	<%= form_for :round, url: new_round_path, method: :get do |t| %>
+	<%= t.text_field :deck_id %>
+	<%= t.hidden_field :round_id, value: @round.id %>
+	<%= t.hidden_field :card_id, value: @card.id %>
+	<%= t.submit "Submit" %>
+<% end %>	
 </div>
+
+
+<%= form_tag new_round_path, method: :get %>
+<%= text_field_tag :guess %>
+<%= hidden_field_tag :round_id, @round.id %>
+<%= hidden_field_tag :card_id, @card.id %>
+<%= submit_tag "submit" %>
+
+
+<%= render '/rounds/wrong' if true %>
+<%= render '/rounds/correct' if false %>

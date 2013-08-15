@@ -14,7 +14,4 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
-var homepage = $('.grade_levels ul li').text
-$(document).ready(function () {
-   console.log(homepage)
-})
+

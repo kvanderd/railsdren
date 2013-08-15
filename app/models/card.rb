@@ -21,8 +21,8 @@ class Card < ActiveRecord::Base
   end
 
 
-  def answer(num1, num2, math_var)
-  	num1 math_var num2
+  def addition_answer(num1, num2)
+  	num1 + num2
   end
 
 
