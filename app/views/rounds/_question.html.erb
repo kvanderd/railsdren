@@ -1,17 +1,10 @@
-<h2>What is ...</h2>
-<%= @card.num1 %> + <%= @card.num2 %>
+
+<h1><%= @card.num1 %> <%= @card.operator %> <%= @card.num2 %></h1>
 <p>this is the round id</p>
 <%= @round.id %>
 <p>This is is the card id</p>
 <%= @card.id %>
-<div class="user_answer_form">
-	<%= form_for :round, url: new_round_path, method: :get do |t| %>
-	<%= t.text_field :deck_id %>
-	<%= t.hidden_field :round_id, value: @round.id %>
-	<%= t.hidden_field :card_id, value: @card.id %>
-	<%= t.submit "Submit" %>
-<% end %>	
-</div>
+
 
 
 <%= form_tag new_round_path, method: :get %>
@@ -21,5 +14,3 @@
 <%= submit_tag "submit" %>
 
 
-<%= render '/rounds/wrong' if true %>
-<%= render '/rounds/correct' if false %>

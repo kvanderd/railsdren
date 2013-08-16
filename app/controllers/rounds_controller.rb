@@ -13,34 +13,21 @@ class RoundsController < ApplicationController
   end
 
   def new
-    guess = (params[:guess])
+    guess = (params[:guess]).to_i
     @round = Round.find(params[:round_id])
     @played_card = Card.find(params[:card_id])
-    answer = @played_card.addition_answer(@played_card.num1, @played_card.num2 )
-    answer == guess.to_i
-      # if true
-      #   render partial: "/rounds/correct"
-      # else
-      #   render partial: "/rounds/wrong"
-      # end
-    @card = Card.find(@played_card.id + 1) 
+    @card = Card.find(@played_card.id + 1)
+    over = @played_card.over?(@played_card.id) 
+    state = @played_card.correct?(guess)
+      if state == false
+        flash[:notice] = "You got it wrong" + "The correct answer it #{@played_card.addition_answer(@played_card.num1, @played_card.num2)}"
+      end
+      if state == true
+        flash[:notice] = "you got it right" 
+      end
+      if over == true
+        redirect_to root_path
+      end
   end
-
-
+  
 end
-
-# {
-#           "utf8" => "✓",
-#         "answer" => "17",
-#       "round_id" => "32",
-#        "card_id" => "2",
-#         "commit" => "submit",
-#         "action" => "new",
-#     "controller" => "rounds"
-# }
-
-
-
-
-# def new
-# if card.id is a multiple of 10 that is not 1 render complete partial else keep showing cards.

@@ -1,9 +1,12 @@
-2<h3>This Will Show All The decks for:</h3>
 
-<h2><%= @grade_name.name %></h2>
+<div class="span8">
+<h1>Select a <%= @grade_name.name %> Math Game</h1>
 
-<%= @grade_name.decks.first.name %>
-<% @grade_name.decks.each do |deck| %>
-		<li>Level: <%= link_to deck.level, rounds_path(deck.id), :method => :post %></li>
+<h2><% @grade_name.decks.each do |deck| %></h2>
+  <h3><%= deck.name %> Level: <%= link_to deck.level, rounds_path(deck.id), :method => :post %></h3>
 <% end %>
-2
+</div>
+
+<div class="span9">
+<div id="dren_pointing"></div>
+</div>

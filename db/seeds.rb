@@ -25,13 +25,13 @@ end
 
 #cards for deck 1
 10.times do
-  var1 = rand(1..10)
-  var2 = rand(1..10) 
+  var1 = rand(1..5)
+  var2 = rand(0..5) 
 	Card.create(num1: var1, num2: var2, operator: "+", deck_id: 1)
 end
 
 10.times do
-  var1 = rand(5..15)
+  var1 = rand(5..10)
   var2 = rand(5..15) 
 	Card.create(num1: var1, num2: var2, operator: "+", deck_id: 2)
 end
@@ -41,4 +41,31 @@ end
   var2 = rand(10..25) 
 	Card.create(num1: var1, num2: var2, operator: "+", deck_id: 3)
 end
+
+#subtraction Deck
+level = 4
+3.times do
+  Deck.create(name: "Subtraction", level: level, grade_id: 1)
+  level += 1
+end
+
+#cards for deck 1
+10.times do
+  var1 = rand(1..5)
+  var2 = rand(0..5) 
+  Card.create(num1: var1, num2: var2, operator: "-", deck_id: 4)
+end
+
+10.times do
+  var1 = rand(5..10)
+  var2 = rand(5..15) 
+  Card.create(num1: var1, num2: var2, operator: "-", deck_id: 5)
+end
+
+10.times do
+  var1 = rand(10..25)
+  var2 = rand(10..25) 
+  Card.create(num1: var1, num2: var2, operator: "-", deck_id: 6)
+end
+
 

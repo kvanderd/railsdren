@@ -1,11 +1,15 @@
-<h2>This is all the card ids for this rounds and grade</h2>
 
 <!-- i could keep these in the dom as a hidden field and loop over it -->
 
+<%= notice %>
 
-<%= render '/rounds/question' if @card %>
+<%= render '/rounds/question' %>
 
 
 <div class="round">
   <div class="question"></div>
 </div>
+
+
+<%= render '/rounds/wrong' if true %>
+<%# render '/rounds/correct' if false %>
