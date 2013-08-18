@@ -59,6 +59,6 @@ module Bootstrapuser
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.secret_token = '3f2d4dadfb36eb84e1d18d3481f498df4b26ca7e6e2be87f0455dc273d7d6b6be81ba7448d1fc3a357c69a888f717365439002e67f35108d54295ef282ef8fdb'
-
+    config.assets.initialize_on_precompile = false
   end
 end
