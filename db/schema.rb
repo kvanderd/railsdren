@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130809155152) do
   create_table "grades", :force => true do |t|
     t.string  "name"
     t.integer "level"
+    t.string  "slug"
   end
 
   create_table "guesses", :force => true do |t|

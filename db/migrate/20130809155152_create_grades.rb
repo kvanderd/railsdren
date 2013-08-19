@@ -6,3 +6,4 @@ class CreateGrades < ActiveRecord::Migration
   	end
   end
 end
+

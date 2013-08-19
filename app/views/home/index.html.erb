@@ -7,7 +7,7 @@
 		  <div class="grade_levels">
 		  	<ul>
 					<% @grades.each do |grade| %>
-					<li class="grade_levels"><%= link_to grade.name, grade_decks_path(grade.id) %></li>
+					<li class="grade_levels"><%= link_to grade.name, grade_path(grade.id) %></li>
 					<% end %>
 			  </ul>
 	    </div>
