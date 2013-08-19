@@ -16,4 +16,9 @@ class Deck < ActiveRecord::Base
   has_many :rounds
   belongs_to :grade
   attr_accessible :name, :level, :grade_id
+
+
+  def to_param
+  "#{id}-#{name}".parameterize
+  end
 end
