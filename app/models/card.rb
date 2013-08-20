@@ -12,6 +12,7 @@
 class Card < ActiveRecord::Base
   belongs_to :deck
   has_many :users
+  has_many :guesses
   attr_accessible :num1, :num2, :operator, :deck_id
   
 

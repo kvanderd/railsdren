@@ -1,0 +1,10 @@
+<div id="new_card">
+<h1><%= @new_card.num1 %> <%= @new_card.operator %> <%= @new_card.num2 %></h1>
+
+<%= form_tag round_guesses_path, method: :post, remote: true %>
+<%= text_field_tag :guess %>
+<%= hidden_field_tag :round_id, @round %>
+<%= hidden_field_tag :card_id, @new_card.id %>
+<%= submit_tag "submit" %>
+
+</div>
