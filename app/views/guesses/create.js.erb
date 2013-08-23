@@ -48,11 +48,18 @@ $button.click(function() {
 	    $correct.removeClass('hide')
 	      .slideDown('slow').delay(1500).slideUp('fast')
 	       $card.remove()
+	       setTimeout(function() {
+             $correct.addClass('hide')
+        }, 2000);
 	  <% end %>
 	  <% if @state == false %>
 	    $wrong.removeClass('hide')
 	      .slideDown('slow').delay(1500).slideUp('fast')
 	       $card.remove()
+	       setTimeout(function() {
+             $wrong.addClass('hide')
+        }, 2000);
+	       
 	  <% end %>
 	  setTimeout(function() {
       $("#another_card").append("<%= j render ('newcard') %>").fadeIn('slow')
