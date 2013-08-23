@@ -3,11 +3,13 @@ class GuessesController < ApplicationController
   def new
   	ap params
   	@round = Round.find(params[:round_id])
-  	@card = @round.deck.cards.first
+  	@new_card = @round.deck.cards.first
   	# @played_card = Card.find(params[:card_id])
   end
 
-  def create 
+  def create
+  puts "I am in create" * 9
+  ap params
   	@round = params[:round_id]
   	guess = params[:guess].to_i
   	@played_card = Card.find(params[:card_id])
@@ -15,8 +17,6 @@ class GuessesController < ApplicationController
   	Guess.create(is_correct: @state, round_id: @round, card_id: @played_card.id)
   	@over = @played_card.over?(@played_card.id)
   	@new_card = Card.find(@played_card.id + 1)
-  	puts " new card stuff" * 89
-  	ap @new_card
   	# redirect_to show_round_guess_path(card_id: @card.id)
   	respond_to do |format|
         format.html

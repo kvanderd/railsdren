@@ -75,6 +75,36 @@ nav a {
   float: right;
 }
 
+#success {
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: green;
+  float: right;
+}
+
+
+
+#wrong {
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: red;
+  float: right;
+}
+
+.hide { 
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.this-will-not-be-read {
+  display: none !important;
+}
+
 /*
 #dren)colors{
 	4f0c8d - purple

@@ -5,6 +5,9 @@
 <%= text_field_tag :guess %>
 <%= hidden_field_tag :round_id, @round %>
 <%= hidden_field_tag :card_id, @new_card.id %>
-<%= submit_tag "submit" %>
+<%= submit_tag "submit", id: "submitGuess" %>
 
 </div>
+
+
+
