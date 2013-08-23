@@ -105,6 +105,39 @@ nav a {
   display: none !important;
 }
 
+#card_question {
+  display: block;
+  position: relative;
+  width: 15em;
+  height: 5em;
+  background-color: #643e27;
+  border: .5em solid #60ba3e;
+  border-radius: .1em;
+}
+
+form {
+  padding-left: 130px;
+}
+
+#guess {
+  width: 15em;
+  height: 4em;
+  display: inline-block;
+  position: relative; 
+  border: .3em solid #643e27;
+}
+
+#submitGuess {
+  width: 5em;
+  height: 4em;
+  display: inline-block;
+  position: relative;
+  border: .3em solid #643e27;
+  border-radius: .1em;
+  background-color: #cc33ff;
+}
+
+
 /*
 #dren)colors{
 	4f0c8d - purple

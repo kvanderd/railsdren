@@ -42,18 +42,21 @@ var $button  = $('#submitGuess'),
 $button.click(function() {
 		$card.slideUp('fast', function() {
 			$card.addClass('hide')
-			.slideDown("slow")
+			// $card.slideDown(600).delay(1500).slideUp('fast')
 
 	  <% if @state == true %>
 	    $correct.removeClass('hide')
 	      .slideDown('slow').delay(1500).slideUp('fast')
+	       $card.remove()
 	  <% end %>
 	  <% if @state == false %>
 	    $wrong.removeClass('hide')
 	      .slideDown('slow').delay(1500).slideUp('fast')
+	       $card.remove()
 	  <% end %>
-	      $card.remove();
-	      $("#another_card").append("<%= j render ('newcard') %>").fadeIn().delay(1500);  
+	  setTimeout(function() {
+      $("#another_card").append("<%= j render ('newcard') %>").fadeIn('slow')
+        }, 2000);
 	 });  
 })
 // $button.click(function(){
