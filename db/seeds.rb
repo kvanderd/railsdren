@@ -43,7 +43,7 @@ end
 end
 
 #subtraction Deck
-level = 4
+level = 1
 3.times do
   Deck.create(name: "Subtraction", level: level, grade_id: 1)
   level += 1

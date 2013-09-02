@@ -24,12 +24,20 @@ body {
   font-family: Finger Paint;
 }
 
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-family: Finger Paint;
+}
+
 h1 {
   color: #cc33ff
 }
 
 .molly {
-	background:url('/assets/dren4.png') no-repeat;
+  background:url('/assets/dren4.png') no-repeat;
   display: block;
   position: relative;
   margin: auto;
@@ -60,10 +68,6 @@ h1 {
   margin-top: 2em;
 }
 
-nav a {
-  padding: 0em 2em 0em 2em;
-}
-
 
 #dren_pointing {
   background:url('/assets/dren_pointing-feet.gif') no-repeat;
@@ -81,7 +85,6 @@ nav a {
   width: 7em;
   height: 7em;
   background-color: green;
-  float: right;
 }
 
 
@@ -92,7 +95,6 @@ nav a {
   width: 7em;
   height: 7em;
   background-color: red;
-  float: right;
 }
 
 .hide { 
@@ -137,11 +139,10 @@ form {
   background-color: #cc33ff;
 }
 
-
 /*
 #dren)colors{
-	4f0c8d - purple
-	cc33ff - pink
-	60ba3e - green
-	643e27 - brown
+  4f0c8d - purple
+  cc33ff - pink
+  60ba3e - green
+  643e27 - brown
 }*/

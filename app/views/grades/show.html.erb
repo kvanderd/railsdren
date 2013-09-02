@@ -1,9 +1,17 @@
 
 <div class="span8">
 <h1>Select a <%= @grade_name.name %> Math Game</h1>
+ 
+<h3>Addition</h3>
 
-<h2><% @grade_name.decks.each do |deck| %></h2>
-  <h3><%= deck.name %> Level: <%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h3>
+<h2><% @addition.each do |deck| %></h2>
+  <h4>Level: <%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
+<% end %>
+
+<h3>Subtraction</h3>
+
+<h2><% @subtraction.each do |deck| %></h2>
+  <h4>Level: <%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
 <% end %>
 </div>
 

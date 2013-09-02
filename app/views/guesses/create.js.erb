@@ -42,27 +42,27 @@ var $button  = $('#submitGuess'),
 $button.click(function() {
 		$card.slideUp('fast', function() {
 			$card.addClass('hide')
-			// $card.slideDown(600).delay(1500).slideUp('fast')
-
+	  
 	  <% if @state == true %>
 	    $correct.removeClass('hide')
-	      .slideDown('slow').delay(1500).slideUp('fast')
+	       .slideDown('slow').delay(1500).slideUp('fast')
 	       $card.remove()
 	       setTimeout(function() {
              $correct.addClass('hide')
         }, 2000);
 	  <% end %>
+
 	  <% if @state == false %>
 	    $wrong.removeClass('hide')
 	      .slideDown('slow').delay(1500).slideUp('fast')
 	       $card.remove()
 	       setTimeout(function() {
              $wrong.addClass('hide')
-        }, 2000);
-	       
+        }, 2000);  
 	  <% end %>
+
 	  setTimeout(function() {
-      $("#another_card").append("<%= j render ('newcard') %>").fadeIn('slow')
+      $("#another_card").append("<%= j render ('newcard') %>")
         }, 2000);
 	 });  
 })
