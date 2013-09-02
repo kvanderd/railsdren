@@ -1,17 +1,15 @@
-<h1>Welcome to Mia Math</h1>
-<div class="span5">
-	<h3>Select Your Grade:</h3>
+<div class="span2">
+	<h2>Select Your Grade:</h2>
 </div>
 <div class="span11">
-	<div class="span4">
+	<div class="span2">
 		  <div class="grade_levels">
 		  	<ul>
 					<% @grades.each do |grade| %>
-					<li class="grade_levels"><%= link_to grade.name, grade_path(grade.id) %></li>
+					<li><%= link_to grade.name, grade_path(grade.id) %></li>
 					<% end %>
 			  </ul>
 	    </div>
 	  </div>
 	<div class="molly"></div>
 </div>
-<p id="molly-intro">Hi, I am Mia.</p>

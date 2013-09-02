@@ -3,6 +3,7 @@ var $button  = $('#submitGuess'),
     $card    = $('#new_card'),
     $correct = $('#success'),
     $wrong   = $('#wrong'),
+    $over    = $('#over'),
     visible = true;
 
 // var testFun = function() {
@@ -40,7 +41,7 @@ var $button  = $('#submitGuess'),
 
 
 $button.click(function() {
-		$card.slideUp('fast', function() {
+		$card.slideUp('fast', function() {	
 			$card.addClass('hide')
 	  
 	  <% if @state == true %>
@@ -61,9 +62,15 @@ $button.click(function() {
         }, 2000);  
 	  <% end %>
 
+   <% if @over == false %>      
 	  setTimeout(function() {
       $("#another_card").append("<%= j render ('newcard') %>")
         }, 2000);
+	  <% else %>
+	   setTimeout(function() {
+      $over.removeClass('hide')
+        }, 2000);
+	  <% end %>
 	 });  
 })
 // $button.click(function(){

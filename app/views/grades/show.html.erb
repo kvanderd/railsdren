@@ -1,22 +1,22 @@
+<div class="span5">
+<div id="list_levels">
+	<h1>Select a <%= @grade_name.name %> Math Game</h1>
+	  <br/>
+	  <h2>Addition Level</h2>
+			<h3><% @addition.each do |deck| %></h3>
+			  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
+			<% end %>
 
-<div class="span8">
-<h1>Select a <%= @grade_name.name %> Math Game</h1>
- 
-<h3>Addition</h3>
-
-<h2><% @addition.each do |deck| %></h2>
-  <h4>Level: <%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
-<% end %>
-
-<h3>Subtraction</h3>
-
-<h2><% @subtraction.each do |deck| %></h2>
-  <h4>Level: <%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
-<% end %>
+    <h2>Subtraction Level</h2>
+			<h3><% @subtraction.each do |deck| %></h3>
+			  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
+			<% end %>
+	</div>
 </div>
 
-<div class="span9">
+
+
 <div id="dren_pointing"></div>
-</div>
 
-<td><%# link_to "Add", student_batch_students_path(@student, :batch_id => b.id), :method=> :post %></td>
+
+

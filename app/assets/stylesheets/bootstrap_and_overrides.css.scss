@@ -7,10 +7,12 @@ $navbarBackgroundHighlight: #60ba3e;
 $navbarLinkColor: #cc33ff;
 $linkColor: #cc33ff;
 
+
 @import "bootstrap";
 
 body { padding-top: 75px; }
 h5 {color: #60ba3e }
+h2 {color: #643e27 }
 @import "bootstrap-responsive";
 
 
@@ -25,6 +27,10 @@ body {
 }
 
 
+footer p {
+  text-align: center;
+}
+
 .container {
   position: absolute;
   left: 0;
@@ -37,7 +43,7 @@ h1 {
 }
 
 .molly {
-  background:url('/assets/dren4.png') no-repeat;
+  background:url('/assets/dren_holding_sign1.gif') no-repeat;
   display: block;
   position: relative;
   margin: auto;
@@ -64,19 +70,36 @@ h1 {
 
 .grade_levels ul li {
   list-style-type: none;
-  font-size: 5em;
-  margin-top: 2em;
+  font-size: 4.5em;
+  margin-top: 1.2em;
 }
 
 
 #dren_pointing {
-  background:url('/assets/dren_pointing-feet.gif') no-repeat;
+  background:url('/assets/dren_pointing1.gif') no-repeat;
   display: block;
   position: relative;
   margin: auto;
+  padding-right: 150px;
+}
+
+#list_levels {
+  height: 10em;
   width: 40em;
-  height: 22em;
-  float: right;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+#list_levels h4 {
+  background:url('/assets/llchalkboard.gif') no-repeat;
+  height: 70px;
+  width: 110px;
+  font-size: 2.5em;
+  margin-top: .5em;
+  display: inline-block;
+  position: relative;
+  text-align:center;
 }
 
 #success {
@@ -137,6 +160,14 @@ form {
   border: .3em solid #643e27;
   border-radius: .1em;
   background-color: #cc33ff;
+}
+
+#over {
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: red;
 }
 
 /*

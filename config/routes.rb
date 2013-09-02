@@ -1,6 +1,7 @@
 Bootstrapuser::Application.routes.draw do
   devise_for :users
-  root :to => 'home#show'
+  root :to => 'home#index'
+  resources :home
   resources :grades
   
   resources :rounds do
