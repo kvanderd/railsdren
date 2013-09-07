@@ -2,19 +2,21 @@
 <div id="list_levels">
 	<h1>Select a <%= @grade_name.name %> Math Game</h1>
 	  <br/>
-	  <h2>Addition Level</h2>
+	  <h2>Addition Levels</h2>
 			<h3><% @addition.each do |deck| %></h3>
-			  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
+				<div id="chalk">
+				  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
+				</div>
 			<% end %>
 
-    <h2>Subtraction Level</h2>
+    <h2>Subtraction Levels</h2>
 			<h3><% @subtraction.each do |deck| %></h3>
-			  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
-			<% end %>
-	</div>
+				<div id="chalk">
+					  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
+				</div>
+				<% end %>
+	  </div>
 </div>
-
-
 
 <div id="dren_pointing"></div>
 

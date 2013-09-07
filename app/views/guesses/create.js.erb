@@ -4,7 +4,45 @@ var $button  = $('#submitGuess'),
     $correct = $('#success'),
     $wrong   = $('#wrong'),
     $over    = $('#over'),
+    $dren    = $('#dren_success'),
     visible = true;
+
+
+$button.click(function() {
+		$card.slideUp('slow', function() {	
+			$card.addClass('hide')
+	  
+	  <% if @state == true %>
+	    $correct.removeClass('hide')
+	    $dren.removeClass('hide')
+	       .slideDown('slow').delay(1500).slideUp('fast')
+	       $card.remove()
+	       setTimeout(function() {
+             $correct.addClass('hide')
+             $dren.addClass('hide')
+        }, 2000);
+	  <% end %>
+
+	  <% if @state == false %>
+	    $wrong.removeClass('hide')
+	      .slideDown('slow').delay(2000).slideUp('fast')
+	       $card.remove()
+	       setTimeout(function() {
+             $wrong.addClass('hide')
+        }, 2000);  
+	  <% end %>
+
+   <% if @over == false %>      
+	  setTimeout(function() {
+      $("#another_card").append("<%= j render ('newcard') %>")
+        }, 2000);
+	  <% else %>
+	   setTimeout(function() {
+      $over.removeClass('hide')
+        }, 2000);
+	  <% end %>
+	 });  
+})
 
 // var testFun = function() {
 // 	console.log("ready")
@@ -38,41 +76,6 @@ var $button  = $('#submitGuess'),
 // });
 
 
-
-
-$button.click(function() {
-		$card.slideUp('fast', function() {	
-			$card.addClass('hide')
-	  
-	  <% if @state == true %>
-	    $correct.removeClass('hide')
-	       .slideDown('slow').delay(1500).slideUp('fast')
-	       $card.remove()
-	       setTimeout(function() {
-             $correct.addClass('hide')
-        }, 2000);
-	  <% end %>
-
-	  <% if @state == false %>
-	    $wrong.removeClass('hide')
-	      .slideDown('slow').delay(1500).slideUp('fast')
-	       $card.remove()
-	       setTimeout(function() {
-             $wrong.addClass('hide')
-        }, 2000);  
-	  <% end %>
-
-   <% if @over == false %>      
-	  setTimeout(function() {
-      $("#another_card").append("<%= j render ('newcard') %>")
-        }, 2000);
-	  <% else %>
-	   setTimeout(function() {
-      $over.removeClass('hide')
-        }, 2000);
-	  <% end %>
-	 });  
-})
 // $button.click(function(){
 // if ( visible ) {
 //   $text.slideUp('fast',function(){

@@ -1,9 +1,13 @@
 <%= render "newcard" %>
 
 <div id="another_card"></div>
+<div class="row">
+	<div class="span11">
+    <div id="success" class="hide"><h1>You Got It Correct</h1></div>
+    <div id="dren_success" class="hide"></div>
+  </div>
+</div>
 
-<div id="success" class="hide">You Got It Correct</div>
-<div id="wrong" class="hide">You Got It Wrong</div>
+<div id="wrong" class="hide"><h1>Oups. The correct answer is: <%= @answer.class %></h1></div>
 
-
-<div id="over" class="hide">The Game Is Over</div>
+<div id="over" class="hide"><h1>The Game Is Over</h1></div>

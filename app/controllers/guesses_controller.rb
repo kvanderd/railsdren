@@ -8,12 +8,11 @@ class GuessesController < ApplicationController
   end
 
   def create
-  puts "I am in create" * 9
-  ap params
   	@round = params[:round_id]
   	guess = params[:guess].to_i
   	@played_card = Card.find(params[:card_id])
   	@state = @played_card.correct?(guess) 
+    @answer = @played_card.addition_answer(@played_card.num1, @played_card.num2)
   	Guess.create(is_correct: @state, round_id: @round, card_id: @played_card.id)
   	@over = @played_card.over?(@played_card.id)
   	@new_card = Card.find(@played_card.id + 1)
