@@ -31,7 +31,9 @@ class Card < ActiveRecord::Base
   end
 
 
-  def hint
+  def hint(num1, num2)
+    current_answer = addition_answer(num1, num2)
+    hint = current_answer - 1
   end
 
 

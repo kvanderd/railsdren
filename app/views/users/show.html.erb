@@ -1,0 +1,11 @@
+<h2>Hi: <%= @user.email %></h2>
+
+
+<h3>Your Recent Games</h3>
+
+
+<% @user.rounds.each do |round| %>
+     <h5><%= round.deck.name %>, Level: <%= round.deck.level %>:
+	<%= round.correct_percentage %>% Correct</h5>
+	Played On: <%= round.created_at.strftime("%d %b. %Y") %>
+<% end %>

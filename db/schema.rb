@@ -14,10 +14,12 @@
 ActiveRecord::Schema.define(:version => 20130809155152) do
 
   create_table "cards", :force => true do |t|
-    t.integer "num1"
-    t.integer "num2"
-    t.string  "operator"
-    t.integer "deck_id"
+    t.integer  "num1"
+    t.integer  "num2"
+    t.string   "operator"
+    t.integer  "deck_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "decks", :force => true do |t|
@@ -31,18 +33,21 @@ ActiveRecord::Schema.define(:version => 20130809155152) do
   create_table "grades", :force => true do |t|
     t.string  "name"
     t.integer "level"
-    t.string  "slug"
   end
 
   create_table "guesses", :force => true do |t|
-    t.integer "card_id"
-    t.integer "round_id"
-    t.boolean "is_correct"
+    t.integer  "card_id"
+    t.integer  "round_id"
+    t.boolean  "is_correct"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "rounds", :force => true do |t|
-    t.integer "deck_id"
-    t.integer "user_id"
+    t.integer  "deck_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

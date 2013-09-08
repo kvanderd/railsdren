@@ -1,9 +1,12 @@
 class RoundsController < ApplicationController
  
 	def create 
-    puts "I am in deck create" * 9
-    ap params
-		@round = Round.create(deck_id: params[:deck_id])
+    if current_user 
+      user = current_user.id
+		  @round = Round.create(deck_id: params[:deck_id], user_id: user)
+    else
+      @round = Round.create(deck_id: params[:deck_id])
+    end
 		session[@round.id]
     # @round = Round.find(params[:id])
     @card = @round.deck.cards.first

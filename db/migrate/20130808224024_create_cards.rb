@@ -4,7 +4,7 @@ class CreateCards < ActiveRecord::Migration
  			t.integer    :num1, :num2
  			t.string :operator
  			t.belongs_to :deck
- 			t.timestamp
+ 			t.timestamps
  		end
   end
 end
