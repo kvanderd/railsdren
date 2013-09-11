@@ -16,7 +16,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem "therubyracer"
   gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-  gem "bootstrap-sass"
+  # gem "bootstrap-sass"
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -50,7 +50,7 @@ group :test, :development do
   gem 'faker'
 end
 
-gem 'devise'
+gem 'devise', '>= 3.0.2'
 gem 'simple_form'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
