@@ -70,6 +70,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
+    haml (4.0.3)
+      tilt
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -147,9 +149,6 @@ GEM
     sexp_processor (4.3.0)
     shoulda-matchers (2.3.0)
       activesupport (>= 3.0.0)
-    simple_form (2.1.0)
-      actionpack (~> 3.0)
-      activemodel (~> 3.0)
     slop (2.1.0)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -188,6 +187,7 @@ DEPENDENCIES
   devise (>= 3.0.2)
   factory_girl_rails
   faker
+  haml
   jquery-rails
   less-rails
   pg
@@ -196,6 +196,5 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda-matchers
-  simple_form
   therubyracer
   uglifier (>= 1.0.3)

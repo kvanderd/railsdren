@@ -1,4 +1,4 @@
-<div class="span5">
+
 <div id="list_levels">
 	<h1>Select a <%= @grade_name.name %> Math Game</h1>
 	  <br/>
@@ -9,14 +9,14 @@
 				</div>
 			<% end %>
 
-    <h2>Subtraction Levels</h2>
-			<h3><% @subtraction.each do |deck| %></h3>
-				<div id="chalk">
-					  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
-				</div>
-				<% end %>
-	  </div>
+  <h2>Subtraction Levels</h2>
+		<h3><% @subtraction.each do |deck| %></h3>
+			<div id="chalk">
+				  <h4><%= link_to deck.level, rounds_path(deck_id: deck.id), :method => :post %></h4>
+			</div>
+			<% end %>
 </div>
+
 
 <div id="dren_pointing"></div>
 
