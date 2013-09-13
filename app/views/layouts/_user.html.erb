@@ -1,16 +1,10 @@
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</a>
-<%= link_to "Mia Math", root_path, class: "brand" %>
-<div class="nav-collapse">
+<ul>
+  </li><%= link_to "Mia Math", root_path, class: "brand" %></li>
 	<!-- <ul class="nav"> -->		
 		<% if current_user %>
 		  <%=  link_to"#{current_user.email}", user_path(current_user.id) %>
 		<% end %>
-    
-    <ul class="nav pull-right">
+
 			<% if user_signed_in? %>
 			  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
 			<% else %>
@@ -18,19 +12,17 @@
 			<% end %>
 
 				<%# form_tag user_session_path do %>
-					  <li><%# text_field_tag 'user[email]', nil, :placeholder => 'email'%></li>
-					  <li><%# password_field_tag 'user[password]', nil, :placeholder => 'password' %></li>
-					<li><%# button_tag "sign in", class: "btn" %></li>
+					 <%# text_field_tag 'user[email]', nil, :placeholder => 'email'%>
+					 <%# password_field_tag 'user[password]', nil, :placeholder => 'password' %>
+				<%# button_tag "sign in", class: "btn" %>
 	      <%# end %>
 
 					<%# label_tag 'user[remember_me]', 'Remember Me' %>
 					<%# check_box_tag 'user[remember_me]', class: "checkbox inline" %>
 
 					<li><%= link_to "Password Lost?", new_password_path('user') %></li>
-	  </div>
-	</ul>
-</div>
 
+</ul>
 
 
 

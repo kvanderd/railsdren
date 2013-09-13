@@ -1,112 +1,17 @@
-var $button  = $('#submitGuess'),
-    $text    = $('#myText'),
-    $card    = $('#new_card'),
-    $correct = $('#success'),
-    $wrong   = $('#wrong'),
-    $over    = $('#over'),
-    $dren    = $('#dren_success'),
-    visible = true;
 
+// var addSlideClass = function(object, selector) {
 
-$button.click(function() {
-		$card.slideUp('slow', function() {	
-			$card.addClass('hide')
-	  
-	  <% if @state == true %>
-	    $correct.removeClass('hide')
-	    $dren.removeClass('hide')
-	       .slideDown('slow').delay(1500).slideUp('fast')
-	       $card.remove()
-	       setTimeout(function() {
-             $correct.addClass('hide')
-             $dren.addClass('hide')
-        }, 2000);
-	  <% end %>
+// }
 
-	  <% if @state == false %>
-	    $wrong.removeClass('hide')
-	      .slideDown('slow').delay(2000).slideUp('fast')
-	       $card.remove()
-	       setTimeout(function() {
-             $wrong.addClass('hide')
-        }, 2000);  
-	  <% end %>
+// var removeSlideClass = function(object, selector) {
+//    $object.removeClass(selector)
+// }
 
-   <% if @over == false %>      
-	  setTimeout(function() {
-      $("#another_card").append("<%= j render ('newcard') %>")
-        }, 2000);
-	  <% else %>
-	   setTimeout(function() {
-      $over.removeClass('hide')
-        }, 2000);
-	  <% end %>
-	 });  
+// var $button  = $('#submitGuess'),
+// 	   visible = true;
+// open question why does this need two clicks?
+$(document).ready(function(){
+	$('#submitGuess').click(function() {
+	   console.log("hello")
+	});
 })
-
-// var testFun = function() {
-// 	console.log("ready")
-// }
-// var addCard = function(this) {
-// 	this.remove();
-//   $("#another_card").append("<%= j render ('newcard') %>")
-// }
-
-// var hideCard = function() {
-// 	console.log("hello")
-//   $('new_card').slideUp('fast', function(){
-//   	$this.addClass('hide')
-//   	  .slideDown(0)
-//   })
-// }
-
-// var successMessage = function() {
-//  $success.removeClass('hide')
-// 	  .slideDown('slow').delay(1500).slideUp('fast').after()
-// }
-
-// var wrongMessage = function() {
-//   $wrong.removeClass('hide')
-// 	  .slideDown('slow').delay(1500).slideUp('fast').after()
-// }
-
-
-// $button.click(function(){
-// 	conosle.log("click")
-// });
-
-
-// $button.click(function(){
-// if ( visible ) {
-//   $text.slideUp('fast',function(){
-//     $text.addClass('hide')
-//          .slideDown(0);
-//   });
-// } else {
-//   $text.slideUp(0,function(){
-//     $text.removeClass('hide')
-//          .slideDown('fast');
-//   });
-// }
-// visible = ! visible;
-// });
-
-
-// $(function(){
-// 	<% if @state == true %>
-// 	  $("#new_card").remove();
-// 	  $("#success").removeClass('hidden').delay(800).fadeOut("slow");
-// 	  $("#another_card").append("<%= j render ('newcard') %>");
-//     <% if @over == true %>
-//   	// $("#card_and_form").hide().after("<%= j render ('newcard') %>");
-//     <% end %>
-//   <% end %>
-// 	  <% if @state == false %>
-// 	  $("#new_card").remove();
-// 	  $("#wrong").removeClass("hidden").delay(800).fadeOut("slow");
-//     // $('#wrong').fadeIn("slow").delay(800).fadeOut("fast");
-// 	  	$("#another_card").append().after("<%= j render ('newcard') %>");
-// 	 <% end %>
-// });
-
-
